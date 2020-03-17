@@ -10,7 +10,7 @@ import sys
 
 EXE_PATH = '/bin/chromedriver'
 driver = webdriver.Chrome(executable_path=EXE_PATH)
-driver.get('https://app.linuxacademy.com/dashboard')
+driver.get('https://app.site.com/dashboard')
 skip_videos = int(input("What video number do you want to start at for first video only (default 0): ")) # Can be used if you dont want to start from the begining... default is 0
 login_username = input("Enter Your Username")
 login_password = input("Enter Your Password: ")
@@ -24,7 +24,7 @@ def login():
     login_button = driver.find_element_by_xpath("/html/body/div/div/div[2]/form/div/div/button")
     login_button.click()
     time.sleep(10)
-    course_links = ["https://linuxacademy.com/cp/modules/view/id/181"]
+    course_links = ["https://site.com/cp/modules/view/id/181"]
     driver.get(course_links[0])
     driver.get("https://linuxacademy.com/cp/ssologin#")
     time.sleep(20)
